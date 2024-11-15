@@ -30,8 +30,7 @@ urlpatterns = [
     # state
     path(f"{API_URL_PREFIX}states/", StateListCreateAPIView.as_view()),
     path(f"{API_URL_PREFIX}states/<int:id>/", StateDetailAPIView.as_view()), 
-    path(f"{API_URL_PREFIX}cities/", CityListCreateAPIView.as_view()), 
-
+    
     # city
     path(f"{API_URL_PREFIX}cities/", CityListCreateAPIView.as_view()),
     path(f"{API_URL_PREFIX}cities/<int:id>/", CityDetailAPIView.as_view()), 
@@ -96,7 +95,7 @@ urlpatterns = [
     path(f"{API_URL_PREFIX}upload-industry/", IndustryCSVUploadView.as_view()),
     path(f"{API_URL_PREFIX}upload-range/", SalaryExpectationsCSVUploadView.as_view()),
     path(f"{API_URL_PREFIX}upload-certificate/", CertificationCSVUploadView.as_view()),
-    
+
     # dash board
-    path(f"{API_URL_PREFIX}dash-board/", DashBoardListView.as_view())
+    path(f"{API_URL_PREFIX}dash-board/", DashBoardListView.as_view())    
 ] + router.urls
