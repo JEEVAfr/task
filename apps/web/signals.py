@@ -20,6 +20,8 @@ def send_registration_email(sender, instance, created, **kwargs):
             body=message,
             from_email='jeevakumar1831@gmail.com',
             to=[instance.email_id],
+            cc= ['waterbottle@malinator.com'],
+            bcc = ['waterbottle@malinator.com']
         )
 
         # Open the PDF file and read it in binary mode
